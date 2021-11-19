@@ -1,70 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-html{
+html {
   font-size: 10px;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: capitalize;
+  font-family: "Montserrat", sans-serif;
+  
 }
-a{
+a {
   text-decoration: none;
 }
-.container{
+.container {
   min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+p{
+  color: white;
+  font-size: 1.4rem;
+  text-align: left;
+  line-height: 1.9rem;
+  letter-spacing: 0.05rem;
+  font-weight: 300;
+}
 /* Hero section */
-#hero{
+#hero {
   background-image: url(./img/noutbuk-kofe-ochki.jpg);
   background-size: cover;
   background-position: top center;
   position: relative;
 }
 
-#hero::after{
-  content: '';
+#hero::after {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: .7;
+  opacity: 0.7;
   z-index: -1;
 }
 
-#hero .hero{
+#hero .hero {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 50px;
   justify-content: flex-start;
 }
-#hero h1{
+#hero h1 {
   display: block;
   width: fit-content;
   font-size: 4rem;
   position: relative;
   color: transparent;
-  animation: text_reveal .5s ease forwards;
-  animation-delay: 1s; 
-}
-#hero h1:nth-child(1){
+  animation: text_reveal 0.5s ease forwards;
   animation-delay: 1s;
 }
-#hero h1:nth-child(2){
+#hero h1:nth-child(1) {
+  animation-delay: 1s;
+}
+#hero h1:nth-child(2) {
   animation-delay: 2s;
 }
-#hero h1:nth-child(3){
-  animation: text_reveal_name .5s ease forwards;
+#hero h1:nth-child(3) {
+  animation: text_reveal_name 0.5s ease forwards;
   animation-delay: 3s;
 }
-#hero h1 span{
+#hero h1 span {
   position: absolute;
   top: 0;
   left: 0;
@@ -73,19 +86,18 @@ a{
   background-color: crimson;
 
   animation: text_reveal_box 1s ease;
-  animation-delay: .3s;
-
+  animation-delay: 0.3s;
 }
-#hero h1:nth-child(1) span{
-  animation-delay: .5s;
+#hero h1:nth-child(1) span {
+  animation-delay: 0.5s;
 }
-#hero h1:nth-child(2) span{
+#hero h1:nth-child(2) span {
   animation-delay: 1.5s;
 }
-#hero h1:nth-child(3) span{
+#hero h1:nth-child(3) span {
   animation-delay: 2.5s;
 }
-#hero .cta{
+#hero .cta {
   display: inline-block;
   padding: 10px 30px;
   color: crimson;
@@ -94,41 +106,114 @@ a{
   text-transform: uppercase;
   font-size: 2rem;
   margin-top: 30px;
-  letter-spacing: .1rem;
-  transition: .3s ease background-color;
- 
-
+  letter-spacing: 0.1rem;
+  transition: 0.3s ease background-color;
 }
-#hero .cta:hover{
+#hero .cta:hover {
   color: white;
   background-color: crimson;
 }
 /* End Hero section */
 
+/* Service Section */
+#service .service {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+#service .section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+#service .section-title span {
+  color: crimson;
+}
+#service .service-top p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin: 5px;
+  line-height: 2.5rem;
+  letter-spacing: 0.05rem;
+  color: black;
+}
+
+#service .service-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+#service .service-item {
+  flex-basis: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: url(./img/coffee.jpg);
+  background-size: cover;
+  margin: 10px 5%;
+
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#service .service-item::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  opacity: .8;
+  z-index: -1;
+}
+#service .service-bottom .icon{
+ 
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+#service .service-item h2{
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* End Service Section */
 /* Keyframs */
 @keyframes text_reveal_box {
-  50%{
+  50% {
     width: 100%;
     left: 0;
   }
-  100%{
+  100% {
     width: 0;
     left: 100%;
   }
 }
-@keyframes text_reveal{
-  100%{
+@keyframes text_reveal {
+  100% {
     color: orange;
   }
-
 }
-@keyframes text_reveal_name{
-  100%{
+@keyframes text_reveal_name {
+  100% {
     color: crimson;
   }
 }
 /* End Keyframs */
-
-/* Service Section */
-
-/* End Service Section */
