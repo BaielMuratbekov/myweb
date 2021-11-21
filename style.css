@@ -19,6 +19,22 @@ a {
   justify-content: center;
   align-items: center;
 }
+.cta {
+  display: inline-block;
+  padding: 10px 30px;
+  color: crimson;
+  background-color: transparent;
+  border: 3px solid crimson;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-top: 30px;
+  letter-spacing: 0.1rem;
+  transition: 0.3s ease background-color;
+}
+.cta:hover {
+  color: white;
+  background-color: crimson;
+}
 img {
   width: 100%;
   height: 100%;
@@ -97,7 +113,7 @@ p{
 #hero h1:nth-child(3) span {
   animation-delay: 2.5s;
 }
-#hero .cta {
+.cta {
   display: inline-block;
   padding: 10px 30px;
   color: crimson;
@@ -109,10 +125,7 @@ p{
   letter-spacing: 0.1rem;
   transition: 0.3s ease background-color;
 }
-#hero .cta:hover {
-  color: white;
-  background-color: crimson;
-}
+
 /* End Hero section */
 
 /* Service Section */
@@ -250,7 +263,7 @@ p{
   flex-basis: 50%;
   height: 300px;
   overflow: hidden;
-  
+  width: 100%;
   position: relative;
 }
 #projects .projects-img::after{
@@ -271,6 +284,58 @@ p{
   transform: scale(1.1);
 }
 /* end Projects Section */
+/* About Section */
+#about .about {
+  flex-direction: column-reverse;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+#about .col-left{
+  width: 250px;
+  height: 360px;
+}
+#about .col-right{
+  width: 100%;
+}
+#about .col-right h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: .2rem;
+  margin-bottom: 10px;
+}
+#about .col-right p {
+  margin-bottom: 20px;
+  color: black;
+ 
+} 
+
+#about .col-right .cta{
+  color: black;
+  padding: 10px 20px;
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+#about .col-left .about-img{
+  height: 100%;
+  width: 100%;
+  position: relative;
+ 
+
+}
+#about .col-left .about-img::after{
+  content: '';
+  position: absolute;
+  left: -33px;
+  top: 19px;
+  height: 98%;
+  width: 98%;
+  border: 7px solid crimson;
+  z-index: -1;
+}
+
+/* End About Section */
 
 /* Keyframs */
 @keyframes text_reveal_box {
