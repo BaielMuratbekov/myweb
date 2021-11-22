@@ -47,6 +47,12 @@ p {
   letter-spacing: 0.05rem;
   font-weight: 300;
 }
+span {
+  color: crimson;
+}
+/* header */
+/* end header */
+
 /* Hero section */
 #hero {
   background-image: url(./img/noutbuk-kofe-ochki.jpg);
@@ -150,9 +156,7 @@ p {
   letter-spacing: 0.2rem;
   text-align: center;
 }
-.section-title span {
-  color: crimson;
-}
+
 #service .service-top{
   max-width: 500px;
   margin: 0 autoq;
